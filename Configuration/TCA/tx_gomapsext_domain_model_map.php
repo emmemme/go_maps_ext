@@ -25,7 +25,7 @@ return [
 	'interface' => [
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, tooltip_title,
 		                          class, width, height, zoom, zoom_min, zoom_max, latitude, longitude, addresses, kml_url, kml_local, show_route,
-		                          calc_route, scroll_zoom, draggable, double_click_zoom, marker_cluster,
+		                          calc_route, scroll_zoom, draggable, double_click_zoom, marker_cluster, 
 		                          marker_cluster_zoom, marker_cluster_size, marker_cluster_style, marker_search, default_type,
 		                          pan_control, scale_control, streetview_control, fullscreen_control, zoom_control, zoom_control_type,
 		                          map_type_control, map_types, styled_map_name, styled_map_code',
@@ -56,7 +56,7 @@ return [
 		]
 	],
 	'palettes' => [
-		'address_interaction' => ['showitem' => 'marker_search, show_addresses, show_categories'],
+		'address_interaction' => ['showitem' => 'marker_search, show_addresses, show_categories, --linebreak--, location_current, location_search'],
 		'cluster' => ['showitem' => 'marker_cluster, --linebreak--, marker_cluster_zoom, marker_cluster_size'],
 		'controls' => ['showitem' => 'pan_control, scale_control, streetview_control, fullscreen_control'],
         'coordinates' => ['showitem' => 'latitude, longitude'],
@@ -297,6 +297,22 @@ return [
 				'default' => 0
 			],
 		],
+        'location_current' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:go_maps_ext/Resources/Private/Language/locallang_db.xlf:tx_gomapsext_domain_model_map.locationCurrent',
+            'config' => [
+                'type' => 'check',
+                'default' => 0
+            ],
+        ],
+        'location_search' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:go_maps_ext/Resources/Private/Language/locallang_db.xlf:tx_gomapsext_domain_model_map.locationSearch',
+            'config' => [
+                'type' => 'check',
+                'default' => 0
+            ],
+        ],
 		'scroll_zoom' => [
 			'exclude' => 1,
 			'label' => 'LLL:EXT:go_maps_ext/Resources/Private/Language/locallang_db.xlf:tx_gomapsext_domain_model_map.scroll_zoom',

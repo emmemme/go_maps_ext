@@ -333,6 +333,13 @@
 		<trans-unit id="tx_gomapsext_domain_model_map.zoom_min">
 			<source>Zoom min</source>
 		</trans-unit>
+        <trans-unit id="tx_gomapsext_domain_model_map.locationCurrent">
+            <source>Show detect position</source>
+        </trans-unit>
+        <trans-unit id="tx_gomapsext_domain_model_map.locationSearch">
+            <source>Show Location search</source>
+        </trans-unit>
+
 		</body>
 	</file>
 </xliff>

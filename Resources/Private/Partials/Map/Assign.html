@@ -65,7 +65,9 @@
             styledMapCode: '',
         </f:else>
     </f:if>
-    defaultZoom: 11
+    defaultZoom: 11,
+    getLocation:'{map.locationCurrent}',
+    searchLocation:'{map.locationSearch}'
     <f:format.raw>}</f:format.raw>
 
     gme.mapSettings.mapTypes = new Array();
@@ -148,6 +150,10 @@
     gme.ll.submit = "<f:translate key="LLL:EXT:go_maps_ext/Resources/Private/Language/locallang.xlf:tx_gomapsext_partials_map_assign.submit" />";
     gme.ll.noSearchResults = "<f:translate key="LLL:EXT:go_maps_ext/Resources/Private/Language/locallang.xlf:tx_gomapsext_partials_map_assign.noSearchResults" />";
     gme.ll.infoWindowLinkText = "<f:translate key="LLL:EXT:go_maps_ext/Resources/Private/Language/locallang.xlf:tx_gomapsext_partials_map_assign.infoWindowLinkText" />";
+
+    gme.ll.geoLocationNotSupported = "<f:translate key="LLL:EXT:go_maps_ext/Resources/Private/Language/locallang.xlf:tx_gomapsext_partials_map_getlocationbutton.noGeolocationSupport" />";
+    gme.ll.geoLocationError = "<f:translate key="LLL:EXT:go_maps_ext/Resources/Private/Language/locallang.xlf:tx_gomapsext_partials_map_getlocationbutton.geolocationError" />";
+
     var $element = jQuery("#" + gme.mapSettings.id);
     $element.gomapsext(gme);
     if(gme.mapSettings.width.indexOf('%') != -1) {

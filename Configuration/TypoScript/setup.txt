@@ -19,6 +19,7 @@ plugin.tx_gomapsext {
 			closeByClick = {$plugin.tx_gomapsext.settings.infoWindow.closeByClick}	
             imageMaxWidth = {$plugin.tx_gomapsext.settings.infoWindow.imageMaxWidth}
 		}
+
 		language < config.language
 	}
 	

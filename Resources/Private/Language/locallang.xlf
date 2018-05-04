@@ -167,6 +167,19 @@
 		<trans-unit id="tx_gomapsext_partials_map_assign.submitSearch">
 			<source>Search</source>
 		</trans-unit>
+        <trans-unit id="tx_gomapsext_partials_map_getlocation.getLocationButton">
+            <source>Get your location</source>
+        </trans-unit>        
+        <trans-unit id="tx_gomapsext_partials_map_getlocation.noGeolocationSupport">
+            <source>Error: Your browser doesn't support geolocation.</source>
+        </trans-unit>
+        <trans-unit id="tx_gomapsext_partials_map_getlocation.geolocationError">
+            <source>Error: The Geolocation service failed.</source>
+        </trans-unit>
+        <trans-unit id="tx_gomapsext_partials_map_searchlocation.submitSearchLocation">
+            <source>Search a geolocation</source>
+        </trans-unit>        
+
 		</body>
 	</file>
 </xliff>

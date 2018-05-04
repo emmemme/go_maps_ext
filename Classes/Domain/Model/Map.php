@@ -277,6 +277,18 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
      * @var \float
      */
     protected $longitude;
+    /**
+     * locationCurrent
+     *
+     * @var boolean
+     */
+    protected $locationCurrent;
+    /**
+     * locationSearch
+     *
+     * @var boolean
+     */
+    protected $locationSearch;
 
 	/**
 	 * __construct
@@ -1213,5 +1225,48 @@ class Map extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
     public function setLongitude($longitude) {
         $this->longitude = $longitude;
     }
+
+    /**
+     * Returns the locationCurrent
+     *
+     * @return boolean $locationCurrent
+     */
+    public function getLocationCurrent()
+    {
+        return $this->locationCurrent;
+    }
+
+    /**
+     * Sets the locationCurrent
+     *
+     * @param boolean $locationCurrent
+     * @return void
+     */
+    public function setLocationCurrent($locationCurrent)
+    {
+        $this->locationCurrent = $locationCurrent;
+    }
+
+    /**
+     * Returns the locationSearch
+     *
+     * @return boolean $locationSearch
+     */
+    public function getLocationSearch()
+    {
+        return $this->locationSearch;
+    }
+
+    /**
+     * Sets the locationSearch
+     *
+     * @param boolean $locationSearch
+     * @return void
+     */
+    public function setLocationSearch($locationSearch)
+    {
+        $this->locationSearch = $locationSearch;
+    }
+                
 
 }

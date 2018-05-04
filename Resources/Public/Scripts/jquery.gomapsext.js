@@ -63,6 +63,7 @@
         this._initializeResizeListener();
         this._initializeCheckboxListener();
         this._initializeAddressListener();
+        this._initializeGetLocationButton();
 
         // open info window
         window.setTimeout(function () {
@@ -514,6 +515,7 @@
             }
         },
 
+
         _initializeBackendAddresses: function () {
             var _this = this,
                 gme = this.data,
@@ -643,7 +645,52 @@
                 _this.focusAddress(selectedAddress, $element, gme);
                 return false;
             });
+        },
+
+        /**
+         *
+         * GET LOCATION BUTTON
+         *
+         */
+
+         _initializeGetLocationButton: function () {
+            var _this = this,
+                _map = this.map,
+                gme = this.data,
+                infoWindow = this.infoWindow,
+                $element = this.element,
+                _posOk = function (position) {
+                    var _pos = {
+                          lat: position.coords.latitude,
+                          lng: position.coords.longitude
+                        };
+                    _map.setCenter(_pos);
+                    
+                    _map.setZoom((gme.mapSettings.zoom > 0) ? gme.mapSettings.zoom : gme.mapSettings.defaultZoom);
+
+                },
+                _posKo = function () {
+                    infoWindow.setPosition(_map.getMapCenter());
+                    infoWindow.setContent(gme.ll.geoLocationError);
+                    infoWindow.open(map);
+                };
+
+            // Get Location Button
+            if (gme.mapSettings.getLocation == 1) {
+                var $myButton = $('#' + gme.mapSettings.id + '-getlocation');
+
+                $myButton.click(function () {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(_posOk, _posKo);
+                    } else {
+                        console.log(gme.ll.geoLocationNotSupported);
+                    }
+                   return false;
+                });                    
+            }
         }
+
+
     };
 
     // create a new Google Map
