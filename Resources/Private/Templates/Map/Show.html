@@ -6,12 +6,8 @@
 <!-- Keep the id and the js-classes -->
 <f:section name="Main">
 
-    <f:if condition="{map.locationCurrent}">
-        <f:render partial="Map/GetLocation" arguments="{_all}"/>
-    </f:if>
-    <f:if condition="{map.locationSearch}">
-        <f:render partial="Map/SearchLocation" arguments="{_all}"/>
-    </f:if>
+
+    <f:render partial="Map/GetLocation" arguments="{_all}"/>
     <f:if condition="{map.showForm}">
         <f:render partial="Map/Form" arguments="{_all}"/>
     </f:if>

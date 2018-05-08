@@ -69,7 +69,7 @@ class MapController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		if ($this->settings['language']) {
 			$googleMapsLibrary .= '&language=' . $this->settings['language'];
 		}
-
+        
 		$pageRenderer->{$addJsMethod . 'Library'}(
 			'googleMaps',
 			$googleMapsLibrary,
